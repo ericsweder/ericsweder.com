@@ -31,6 +31,18 @@
     "knowsAbout": ["Mediumschap", "Spirituele ontwikkeling", "Bewustwording", "Spirituele filosofie"]
   }
   </script>
+  <script>
+    (function() {
+      // Handmatige taalkeuze altijd respecteren
+      var langPref = document.cookie.match(/(?:^|;\s*)lang-pref=([^;]+)/);
+      if (langPref) return;
+      // Browsertaal als proxy: nl en nl-BE → Nederlands, rest → Engels
+      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      if (!lang.startsWith('nl')) {
+        window.location.replace('en.html');
+      }
+    })();
+  </script>
   <link rel="alternate" hreflang="nl" href="index.html">
   <link rel="alternate" hreflang="en" href="en.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
