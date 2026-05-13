@@ -33,6 +33,8 @@
   </script>
   <link rel="alternate" hreflang="nl" href="index.html">
   <link rel="alternate" hreflang="en" href="en.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -1350,7 +1352,7 @@
 
   <!-- HERO -->
   <section class="hero">
-    <img class="hero__bg" src="images/PB060035.jpg" alt="Eric Sweder — spiritueel medium in Hilversum">
+    <img class="hero__bg" src="images/PB060035.jpg" alt="Eric Sweder — spiritueel medium in Hilversum" fetchpriority="high" loading="eager">
     <div class="hero__overlay"></div>
     <div class="hero__lang">
       <span class="hero__lang-active">NL</span>
@@ -1379,6 +1381,7 @@
         <img
           src="images/PB060257.jpg"
           alt="Eric Sweder"
+          loading="lazy"
         >
         <div class="tablet-mockup__overlay">
           <p class="tablet-mockup__eyebrow">Spirituele Reis</p>
@@ -1426,6 +1429,7 @@
       <img
         src="images/PB060175.jpg"
         alt="Eric Sweder"
+        loading="lazy"
       >
     </div>
   </section>
@@ -1450,6 +1454,7 @@
         <img
           src="images/PB060146.jpg"
           alt="Online mentorship spiritueel medium Eric Sweder"
+          loading="lazy"
           style="object-position: center 15%;"
         >
         <a href="#" class="work__label" id="openMentorshipModal">Online Mentorships</a>
@@ -1458,6 +1463,7 @@
         <img
           src="images/IMG_2727.jpg"
           alt="Blog over spirituele filosofie door Eric Sweder"
+          loading="lazy"
         >
         <a href="#" class="work__label" id="openBlogModal">Blog — Filosofie</a>
       </div>
@@ -1582,14 +1588,16 @@
       <div class="story-card">
         <img class="story-card__image"
           src="images/PB060100.jpg"
-          alt="Belofte aan liefde — het verhaal van Liv">
+          alt="Belofte aan liefde — het verhaal van Liv"
+          loading="lazy">
         <p class="story-card__title">Belofte aan liefde — het verhaal van Liv</p>
         <a href="#" class="story-card__link" onclick="openStory(); return false;">Lees meer</a>
       </div>
       <div class="story-card">
         <img class="story-card__image"
           src="images/PB060017.jpg"
-          alt="Een onverwacht gesprek met mijn vader">
+          alt="Een onverwacht gesprek met mijn vader"
+          loading="lazy">
         <p class="story-card__title">Een onverwacht gesprek met mijn vader</p>
         <a href="#" class="story-card__link">Lees meer</a>
       </div>
@@ -1600,14 +1608,16 @@
       <div class="story-card">
         <img class="story-card__image"
           src="images/mavis-pittilla.jpg"
-          alt="Een ambassadeur van twee werelden">
+          alt="Een ambassadeur van twee werelden"
+          loading="lazy">
         <p class="story-card__title">Een ambassadeur van twee werelden</p>
         <a href="#" class="story-card__link" onclick="openStory3(); return false;">Lees meer</a>
       </div>
       <div class="story-card">
         <img class="story-card__image"
           src="images/ilone-berg.jpg"
-          alt="Ilone — Ruimte om los te laten">
+          alt="Ilone — Ruimte om los te laten"
+          loading="lazy">
         <p class="story-card__title">Ilone — Ruimte om los te laten</p>
         <a href="#" class="story-card__link" onclick="openStory2(); return false;">Lees meer</a>
       </div>
