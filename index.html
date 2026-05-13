@@ -1942,28 +1942,30 @@
           <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; color:#e8e4d8; margin:0;">Laren, Noord-Holland &nbsp;·&nbsp; 09:30 – 16:00</p>
         </div>
         <div style="padding:48px 52px 52px;">
-          <form class="contact__form" id="aanmeldForm">
+          <form class="contact__form" id="aanmeldForm" action="https://formspree.io/f/xkoyepee" method="POST">
+            <input type="hidden" name="_subject" value="Nieuwe aanmelding Jaaropleiding 2028 — byericsweder.nl">
+            <input type="text" name="_gotcha" style="display:none">
 
             <!-- Naam -->
             <div class="form-group--row" style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
               <div class="form-group">
                 <label class="form-label">Voornaam <span>(verplicht)</span></label>
-                <input class="form-input" type="text" required>
+                <input class="form-input" type="text" name="voornaam" required>
               </div>
               <div class="form-group">
                 <label class="form-label">Achternaam <span>(verplicht)</span></label>
-                <input class="form-input" type="text" required>
+                <input class="form-input" type="text" name="achternaam" required>
               </div>
             </div>
 
             <!-- Contact -->
             <div class="form-group">
               <label class="form-label">E-mail <span>(verplicht)</span></label>
-              <input class="form-input" type="email" required>
+              <input class="form-input" type="email" name="email" required>
             </div>
             <div class="form-group">
               <label class="form-label">Telefoon <span>(optioneel)</span></label>
-              <input class="form-input" type="tel">
+              <input class="form-input" type="tel" name="telefoon">
             </div>
 
             <!-- Groepskeuze -->
@@ -2027,6 +2029,7 @@
             </div>
 
             <button class="form-submit" type="submit" style="align-self:flex-start;">Aanmelding versturen</button>
+            <p id="aanmeldSuccess" style="display:none; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; color:#848668; margin-top:16px;">Bedankt voor je aanmelding! Ik neem zo snel mogelijk contact met je op.</p>
           </form>
         </div>
       </div>
@@ -2079,26 +2082,29 @@
         <button class="modal__close" id="closeContactModal">&times;</button>
         <span class="modal__tag">Stuur een bericht</span>
         <h2 class="contact__title" style="font-size:clamp(36px,4vw,52px); margin-bottom:32px;">Contact</h2>
-        <form class="contact__form">
+        <form class="contact__form" id="contactForm" action="https://formspree.io/f/xeendpdr" method="POST">
+          <input type="hidden" name="_subject" value="Nieuw contactbericht — byericsweder.nl">
+          <input type="text" name="_gotcha" style="display:none">
           <div class="form-group--row" style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
             <div class="form-group">
               <label class="form-label"><span>Voornaam</span></label>
-              <input class="form-input" type="text" required>
+              <input class="form-input" type="text" name="voornaam" required>
             </div>
             <div class="form-group">
               <label class="form-label"><span>Achternaam</span></label>
-              <input class="form-input" type="text" required>
+              <input class="form-input" type="text" name="achternaam" required>
             </div>
           </div>
           <div class="form-group">
             <label class="form-label">E-mail <span>(verplicht)</span></label>
-            <input class="form-input" type="email" required>
+            <input class="form-input" type="email" name="email" required>
           </div>
           <div class="form-group">
             <label class="form-label">Bericht <span>(verplicht)</span></label>
-            <textarea class="form-textarea" required></textarea>
+            <textarea class="form-textarea" name="bericht" required></textarea>
           </div>
           <button class="form-submit" type="submit">Versturen</button>
+          <p id="contactSuccess" style="display:none; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; color:#848668; margin-top:16px;">Bedankt! Je bericht is verzonden.</p>
         </form>
       </div>
     </div>
@@ -2141,33 +2147,36 @@
         </p>
       </div>
       <div class="modal__right" style="position:relative;">
-        <form class="contact__form">
+        <form class="contact__form" id="consultForm" action="https://formspree.io/f/xykovbvp" method="POST">
+          <input type="hidden" name="_subject" value="Nieuwe consultaanvraag — byericsweder.nl">
+          <input type="text" name="_gotcha" style="display:none">
           <div class="form-group">
             <label class="form-label">Naam</label>
             <div class="form-group--row">
               <div class="form-group">
                 <label class="form-label"><span>Voornaam (verplicht)</span></label>
-                <input class="form-input" type="text" required>
+                <input class="form-input" type="text" name="voornaam" required>
               </div>
               <div class="form-group">
                 <label class="form-label"><span>Achternaam (verplicht)</span></label>
-                <input class="form-input" type="text" required>
+                <input class="form-input" type="text" name="achternaam" required>
               </div>
             </div>
           </div>
           <div class="form-group">
             <label class="form-label">E-mail <span>(verplicht)</span></label>
-            <input class="form-input" type="email" required>
+            <input class="form-input" type="email" name="email" required>
           </div>
           <div class="form-group">
             <label class="form-label">Onderwerp <span>(verplicht)</span></label>
-            <input class="form-input" type="text" required>
+            <input class="form-input" type="text" name="onderwerp" required>
           </div>
           <div class="form-group">
             <label class="form-label">Bericht <span>(verplicht)</span></label>
-            <textarea class="form-textarea" required></textarea>
+            <textarea class="form-textarea" name="bericht" required></textarea>
           </div>
-          <button class="form-submit" type="submit">Versturen</button>
+          <button class="form-submit" type="submit" id="consultSubmit">Versturen</button>
+          <p id="consultSuccess" style="display:none; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; color:#848668; margin-top:16px;">Bedankt! Je bericht is verzonden. Ik neem zo snel mogelijk contact met je op.</p>
         </form>
       </div>
     </div>
@@ -2421,6 +2430,39 @@
         document.body.style.overflow = '';
       }
     });
+
+    // Formspree AJAX handlers
+    function handleForm(formId, successId) {
+      const form = document.getElementById(formId);
+      if (!form) return;
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = form.querySelector('[type="submit"]');
+        btn.textContent = 'Versturen…';
+        btn.disabled = true;
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          });
+          if (res.ok) {
+            form.reset();
+            btn.style.display = 'none';
+            document.getElementById(successId).style.display = 'block';
+          } else {
+            btn.textContent = 'Probeer opnieuw';
+            btn.disabled = false;
+          }
+        } catch(err) {
+          btn.textContent = 'Probeer opnieuw';
+          btn.disabled = false;
+        }
+      });
+    }
+    handleForm('consultForm', 'consultSuccess');
+    handleForm('contactForm', 'contactSuccess');
+    handleForm('aanmeldForm', 'aanmeldSuccess');
 
     // Consult modal
     const backdrop = document.getElementById('modal');
