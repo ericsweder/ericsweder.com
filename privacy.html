@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacyverklaring — By Eric Sweder</title>
+  <meta name="description" content="Privacyverklaring van By Eric Sweder. Lees hoe wij omgaan met jouw persoonsgegevens.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      color: #2a2520;
+      background: #f2ede7;
+      overflow-x: hidden;
+    }
+
+    /* ─── HEADER ─── */
+    .page-header {
+      background: #1c1814;
+      padding: 40px 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .page-header__brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 28px;
+      color: #f0e8dc;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+
+    .page-header__back {
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(240,232,220,0.7);
+      text-decoration: none;
+      border: 1px solid rgba(240,232,220,0.3);
+      border-radius: 100px;
+      padding: 10px 24px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .page-header__back:hover {
+      color: #f0e8dc;
+      border-color: rgba(240,232,220,0.7);
+    }
+
+    /* ─── CONTENT ─── */
+    .privacy {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 80px 40px 120px;
+    }
+
+    .privacy__eyebrow {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 11px;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: #8a8070;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .privacy__title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: clamp(40px, 5vw, 64px);
+      line-height: 1.0;
+      text-transform: uppercase;
+      color: #1e1c18;
+      margin-bottom: 16px;
+      letter-spacing: 0.01em;
+    }
+
+    .privacy__date {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 13px;
+      color: #9a9080;
+      margin-bottom: 56px;
+      display: block;
+    }
+
+    .privacy__divider {
+      width: 48px;
+      height: 1px;
+      background: #c8c0b0;
+      margin-bottom: 56px;
+    }
+
+    .privacy__section {
+      margin-bottom: 48px;
+    }
+
+    .privacy__section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 22px;
+      color: #1e1c18;
+      margin-bottom: 16px;
+    }
+
+    .privacy__text {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 1.85;
+      color: #4a4540;
+      margin-bottom: 16px;
+    }
+
+    .privacy__text:last-child {
+      margin-bottom: 0;
+    }
+
+    .privacy__list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px;
+    }
+
+    .privacy__list li {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 1.85;
+      color: #4a4540;
+      padding: 8px 0 8px 20px;
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+      position: relative;
+    }
+
+    .privacy__list li:last-child {
+      border-bottom: none;
+    }
+
+    .privacy__list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #95967d;
+    }
+
+    .privacy__table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 16px;
+    }
+
+    .privacy__table th {
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #8a8070;
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 2px solid rgba(0,0,0,0.1);
+    }
+
+    .privacy__table td {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      color: #4a4540;
+      padding: 12px 12px;
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+
+    .privacy__table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .privacy__link {
+      color: #2a2520;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .privacy__link:hover {
+      color: #848668;
+    }
+
+    /* ─── FOOTER ─── */
+    .page-footer {
+      background: #d6cfc3;
+      padding: 40px 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .page-footer__copy {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 12px;
+      color: #4a4540;
+    }
+
+    .page-footer__back {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 13px;
+      color: #4a4540;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .page-footer__back:hover { color: #1c1814; }
+
+    @media (max-width: 600px) {
+      .page-header { padding: 28px 24px; }
+      .page-header__brand { font-size: 22px; }
+      .privacy { padding: 56px 24px 80px; }
+      .page-footer { padding: 32px 24px; flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="page-header">
+    <a href="index.html" class="page-header__brand">By Eric Sweder</a>
+    <a href="index.html" class="page-header__back">← Terug naar de site</a>
+  </header>
+
+  <main class="privacy">
+
+    <span class="privacy__eyebrow">Juridisch</span>
+    <h1 class="privacy__title">Privacyverklaring</h1>
+    <span class="privacy__date">Laatst bijgewerkt: 13 mei 2026</span>
+    <div class="privacy__divider"></div>
+
+    <div class="privacy__section">
+      <h2 class="privacy__section-title">1. Wie is verantwoordelijk?</h2>
+      <p class="privacy__text">
+        Deze website is eigendom van en wordt beheerd door:
+      </p>
+      <p class="privacy__text">
+        <strong>Eric Sweder</strong><br>
+        Spiritueel medium &amp; begeleider<br>
+        Hilversum, Nederland<br>
+        E-mail: <a href="mailto:esvdzw@gmail.com" class="privacy__link">esvdzw@gmail.com</a>
+      </p>
+      <p class="privacy__text">
+        Eric Sweder is de verwerkingsverantwoordelijke voor de persoonsgegevens die via deze website worden verwerkt.
+      </p>
+    </div>
+
+    <div class="privacy__section">
+      <h2 class="privacy__section-title">2. Welke gegevens verzamelen wij?</h2>
+      <p class="privacy__text">Via de formulieren op deze website kunnen de volgende persoonsgegevens worden verzameld:</p>
+      <table class="privacy__table">
+        <thead>
+          <tr>
+            <th>Formulier</th>
+            <th>Gegevens</th>
+            <th>Doel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nieuwsbrief</td>
+            <td>E-mailadres</td>
+            <td>Verzenden van aankondigingen en updates</td>
+          </tr>
+          <tr>
+            <td>Privé consult</td>
+            <td>Voor- en achternaam, e-mailadres, bericht</td>
+            <td>Verwerken van consultaanvragen</td>
+          </tr>
+          <tr>
+            <td>Contact</td>
+            <td>Voor- en achternaam, e-mailadres, bericht</td>
+            <td>Beantwoorden van vragen en berichten</td>
+          </tr>
+          <tr>
+            <td>Jaaropleiding aanmelding</td>
+            <td>Voor- en achternaam, e-mailadres, telefoonnummer, leerdoelen</td>
+            <td>Verwerken van aanmeldingen voor de opleiding</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="privacy__text">
+        Wij verzamelen uitsluitend gegevens die je zelf invult. Er worden geen gegevens automatisch verzameld via cookies of tracking-scripts, met uitzondering van het laden van lettertypen via Google Fonts (zie artikel 5).
+      </p>
+    </div>
+
+    <div class="privacy__section">
+      <h2 class="privacy__section-title">3. Grondslag voor verwerking</h2>
+      <p class="privacy__text">Wij verwerken jouw persoonsgegevens op basis van:</p>
+      <ul class="privacy__list">
+        <li><strong>Toestemming</strong> — voor de nieuwsbrief (via dubbele opt-in conform GDPR)</li>
+        <li><strong>Uitvoering van een overeenkomst</strong> — voor consult- en opleidingsaanvragen</li>
+        <li><strong>Gerechtvaardigd belang</strong> — voor het beantwoorden van contactberichten</li>
+      </ul>
+    </div>
+
+    <div class="privacy__section">
+      <h2 class="privacy__section-title">4. Hoe lang bewaren wij jouw gegevens?</h2>
+      <ul class="privacy__list">
+        <li><strong>Nieuwsbrief</strong> — zolang je ingeschreven bent. Na uitschrijving worden gegevens verwijderd uit Mailchimp.</li>
+        <li><strong>Contactberichten &amp; consultaanvragen</strong> — maximaal 1 jaar na het laatste contact.</li>
+        <li><strong>Jaaropleiding aanmeldingen</strong> — maximaal 2 jaar na afronding van de opleiding.</li>
+      </ul>
+    </div>
+
+    <div class="privacy__section">
+      <h2 class="privacy__section-title">5. Externe partijen (verwerkers)</h2>
+      <p class="privacy__text">Wij maken gebruik van de volgende externe diensten die jouw gegevens kunnen verwerken:</p>
+      <table class="privacy__table">
+        <thead>
+          <tr>
+            <th>Dienst</th>
+            <th>Doel</th>
+            <th>Locatie</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Mailchimp</strong> (Intuit Inc.)</td>
+            <td>Verzenden van nieuwsbrieven</td>
+            <td>Verenigde Staten — <a href="https://mailchimp.com/legal/privacy/" target="_blank" class="privacy__link">privacybeleid</a></td>
+          </tr>
+          <tr>
+            <td><strong>Formspree</strong></td>
+            <td>Verwerken van contactformulieren</td>
+            <td>Verenigde Staten — <a href="https://formspree.io/legal/privacy-policy/" target="_blank" class="privacy__link">privacybeleid</a></td>
+          </tr>
+          <tr>
+            <td><strong>Google Fonts</strong></td>
+            <td>Laden van lettertypen</td>
+            <td>Verenigde Staten — <a href="https://policies.google.com/privacy" target="_blank" class="privacy__link">privacybeleid</a></td>
+          </tr>
+          <tr>
+            <td><strong>Vercel</strong></td>
+            <td>Hosting van de website</td>
+            <td>Verenigde Staten — <a href="https://vercel.com/legal/privacy-policy" target="_blank" class="privacy__link">privacybeleid</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="privacy__text">
+        Met Mailchimp en Formspree is dataoverdracht naar de VS mogelijk. Beide partijen vallen onder het EU-VS Data Privacy Framework en zijn gecertificeerd conform de toepasselijke AVG-vereisten.
+      </p>
+    </div>
+
+    <div class="privacy__section">
+      <h2 class="privacy__section-title">6. Jouw rechten</h2>
+      <p class="privacy__text">Op grond van de Algemene Verordening Gegevensbescherming (AVG) heb je de volgende rechten:</p>
+      <ul class="privacy__list">
+        <li><strong>Inzage</strong> — je kunt opvragen welke gegevens wij van je hebben</li>
+        <li><strong>Correctie</strong> — je kunt onjuiste gegevens laten aanpassen</li>
+        <li><strong>Verwijdering</strong> — je kunt verzoeken om verwijdering van jouw gegevens</li>
+        <li><strong>Bezwaar</strong> — je kunt bezwaar maken tegen verwerking van jouw gegevens</li>
+        <li><strong>Overdraagbaarheid</strong> — je kunt jouw gegevens in een gangbaar formaat opvragen</li>
+        <li><strong>Intrekking toestemming</strong> — je kunt je op elk moment uitschrijven voor de nieuwsbrief</li>
+      </ul>
+      <p class="privacy__text">
+        Stuur voor het uitoefenen van jouw rechten een e-mail naar <a href="mailto:esvdzw@gmail.com" class="privacy__link">esvdzw@gmail.com</a>. Wij reageren binnen 30 dagen.
+      </p>
+    </div>
+
+    <div class="privacy__section">
+      <h2 class="privacy__section-title">7. Klachten</h2>
+      <p class="privacy__text">
+        Heb je een klacht over hoe wij met jouw gegevens omgaan? Neem dan eerst contact met ons op via <a href="mailto:esvdzw@gmail.com" class="privacy__link">esvdzw@gmail.com</a>. Je hebt ook het recht om een klacht in te dienen bij de Autoriteit Persoonsgegevens: <a href="https://www.autoriteitpersoonsgegevens.nl" target="_blank" class="privacy__link">autoriteitpersoonsgegevens.nl</a>.
+      </p>
+    </div>
+
+    <div class="privacy__section">
+      <h2 class="privacy__section-title">8. Wijzigingen</h2>
+      <p class="privacy__text">
+        Wij behouden het recht deze privacyverklaring te wijzigen. De meest actuele versie is altijd beschikbaar op deze pagina. Bij ingrijpende wijzigingen stellen wij ingeschreven nieuwsbriefontvangers hiervan op de hoogte.
+      </p>
+    </div>
+
+  </main>
+
+  <footer class="page-footer">
+    <p class="page-footer__copy">© 2026 By Eric Sweder — Alle rechten voorbehouden</p>
+    <a href="index.html" class="page-footer__back">← Terug naar de site</a>
+  </footer>
+
+</body>
+</html>
