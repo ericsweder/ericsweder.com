@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# iCloud
+*.icloud
+
+# Raw/large originals
+images/*.HEIC
+images/*.heic
+
+# Screenshots / tijdelijk
+images/Scherm*
+
+# Dev
+serve.sh
