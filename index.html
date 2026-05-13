@@ -2416,12 +2416,8 @@
       document.body.style.overflow = 'hidden';
     });
 
-    // Nieuwsbrief modal
+    // Nieuwsbrief modal (alleen sluiten, openen gaat nu via Mailchimp-koppeling)
     const newsBackdrop = document.getElementById('newsModal');
-    document.getElementById('openNewsModal').addEventListener('click', function() {
-      newsBackdrop.classList.add('is-open');
-      document.body.style.overflow = 'hidden';
-    });
     document.getElementById('closeNewsModal').addEventListener('click', function() {
       newsBackdrop.classList.remove('is-open');
       document.body.style.overflow = '';
