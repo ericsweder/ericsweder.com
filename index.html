@@ -2449,17 +2449,20 @@
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email })
         });
+        const data = await res.json().catch(() => ({}));
         if (res.ok) {
           emailInput.value = '';
           emailInput.style.display = 'none';
           this.style.display = 'none';
           successEl.style.display = 'block';
         } else {
+          errorEl.textContent = 'Fout: ' + (data.error || res.status);
           errorEl.style.display = 'block';
           this.textContent = 'Inschrijven';
           this.disabled = false;
         }
       } catch(e) {
+        errorEl.textContent = 'Fout: ' + e.message;
         errorEl.style.display = 'block';
         this.textContent = 'Inschrijven';
         this.disabled = false;
