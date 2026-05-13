@@ -15,22 +15,28 @@ export const config = {
 
 export default function middleware(request) {
   const url = new URL(request.url);
-  const country = request.geo?.country ?? '';
+
+  // Vercel injecteert het land als header (geen Next.js nodig)
+  const country = request.headers.get('x-vercel-ip-country') || '';
+
+  // Cookie handmatig uitlezen uit de cookie-header
+  const cookieStr = request.headers.get('cookie') || '';
+  const langMatch = cookieStr.match(/(?:^|;\s*)lang-pref=([^;]+)/);
+  const langPref = langMatch ? langMatch[1] : null;
 
   // Handmatige taalkeuze altijd respecteren
-  const langPref = request.cookies.get('lang-pref')?.value;
-  if (langPref === 'nl') return;                    // gebruiker koos NL
+  if (langPref === 'nl') return;           // gebruiker koos NL → blijf op Dutch
   if (langPref === 'en') {
     url.pathname = '/en.html';
-    return Response.redirect(url, 302);             // gebruiker koos EN
+    return Response.redirect(url, 302);    // gebruiker koos EN
   }
 
-  // Automatische detectie: NL en BE krijgen Nederlands
+  // Automatische detectie: NL en BE → Nederlands, rest → Engels
   const dutchCountries = ['NL', 'BE'];
   if (country && !dutchCountries.includes(country)) {
     url.pathname = '/en.html';
     return Response.redirect(url, 302);
   }
 
-  // NL / BE / onbekend → Dutch (standaard, geen redirect nodig)
+  // NL / BE / onbekend → standaard Dutch pagina serveren
 }
