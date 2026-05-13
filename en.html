@@ -1289,7 +1289,10 @@
       .modal-backdrop { padding: 0; align-items: flex-end; }
       .modal { max-height: 95vh; border-radius: 12px 12px 0 0; grid-template-columns: 1fr; }
       .modal__left { padding: 40px 24px 24px; border-right: none; border-bottom: 1px solid #e0d8d0; }
-      .modal__right { padding: 24px 24px 40px; }
+      .modal__right { padding: 24px 24px 48px; }
+      .contact__form { width: 100%; }
+      .form-input, .form-textarea { max-width: 100%; width: 100%; }
+      .form-submit { align-self: stretch; text-align: center; }
       .modal--narrow { max-width: 100%; border-radius: 12px 12px 0 0; }
       .modal--story { max-width: 100%; max-height: 95vh; border-radius: 12px 12px 0 0; }
       .modal__single { padding: 40px 24px; }
@@ -1344,8 +1347,8 @@
     </div>
     <div class="hero__content">
       <span class="hero__eyebrow">By Eric Sweder &nbsp;—&nbsp; Spiritual Medium</span>
-      <h1 class="hero__title">Make space for the power within you!</h1>
-      <a href="#" class="btn-outline" id="openModal">Book a consultation</a>
+      <h1 class="hero__title">Embrace the Power Within You!</h1>
+      <a href="#" class="btn-outline" id="openModal">Book a private sitting</a>
     </div>
   </section>
 
@@ -1391,7 +1394,7 @@
     <div class="brand-statement__left">
       <div class="brand-statement__inner">
         <span class="brand-statement__eyebrow">About Eric Sweder</span>
-        <h2 class="brand-statement__title">Love<br>survives all</h2>
+        <h2 class="brand-statement__title">Love Like Life<br>Can Never Die</h2>
         <p class="brand-statement__text">
           The voice that speaks from within deserves a place in your life. Find the path to the heart, discover the power that lives within you and pass on the love for life.
         </p>
@@ -1522,7 +1525,7 @@
     <div class="parallax-cta__content">
       <span class="parallax-cta__eyebrow">Ready for the next step?</span>
       <h2 class="parallax-cta__title">"Freeing yourself from everything that holds you back takes tremendous courage and perseverance. It is the most beautiful gift you can give yourself."</h2>
-      <a href="#" class="btn-pill" id="openModalParallax">Book a consultation</a>
+      <a href="#" class="btn-pill" id="openModalParallax">Book a private sitting</a>
     </div>
   </section>
 
@@ -1573,13 +1576,13 @@
     <div class="footer__top">
       <div>
         <span class="footer__brand">By Eric Sweder</span>
-        <p class="footer__tagline">Spiritual medium &amp; guide.<br>Love survives all.</p>
+        <p class="footer__tagline">Spiritual medium &amp; guide.<br>Love like life can never die.</p>
         <p class="footer__tagline" style="margin-top:8px; font-size:13px; opacity:0.6;">Based in Hilversum</p>
       </div>
       <div>
         <span class="footer__col-title">Navigation</span>
         <ul class="footer__links">
-          <li><a href="#" id="openModalFooter">Book a consultation</a></li>
+          <li><a href="#" id="openModalFooter">Book a private sitting</a></li>
           <li><a href="#" id="openContactFooter">Contact</a></li>
           <li><a href="#">Personal stories</a></li>
         </ul>
@@ -1684,114 +1687,12 @@
 
   <!-- ANNUAL TRAINING MODAL -->
   <div class="modal-backdrop" id="jaaropleidingModal">
-    <div class="modal modal--story">
-      <div class="modal__story-inner" style="position:relative;">
+    <div class="modal modal--narrow">
+      <div class="modal__single" style="position:relative; text-align:center; padding:72px 52px;">
         <button class="modal__close" id="closeJaaropleidingModal">&times;</button>
-        <div style="position:relative; min-height:320px; display:flex; align-items:flex-end;">
-          <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1200&q=85" alt="Annual Mediumship Training" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
-          <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(28,24,20,0.95) 0%, rgba(28,24,20,0.65) 50%, rgba(28,24,20,0.2) 100%);"></div>
-          <div style="position:relative; padding:40px 52px 40px;">
-            <span class="modal__tag" style="color:#95967d;">Training</span>
-            <h2 class="contact__title" style="font-size:clamp(32px,3.5vw,52px); margin-bottom:8px; color:#f2ede7;">Annual Mediumship Training 2028</h2>
-            <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:#95967d; margin-bottom:24px;">Year of Awakening</p>
-            <div style="background:rgba(149,150,125,0.2); border-left:3px solid #95967d; padding:16px 20px; border-radius:2px;">
-              <p style="font-family:'Jost',sans-serif; font-weight:400; font-size:14px; color:#d6cfc3; letter-spacing:0.04em;">⚠️&nbsp; Please note: There will be no annual training in 2027. The next training starts in January 2028.</p>
-            </div>
-          </div>
-        </div>
-        <div style="padding: 48px 52px 52px;">
-
-          <!-- REGISTRATION BUTTON -->
-          <div style="margin-bottom:40px; padding:28px 32px; background:#95967d; border-radius:4px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
-            <div>
-              <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:#f0ece4; margin:0 0 4px;">Ready to start?</p>
-              <p style="font-family:'Jost',sans-serif; font-weight:300; font-size:13px; color:#e8e4d8; margin:0;">Register for the 2028 annual training</p>
-            </div>
-            <a href="#" class="btn-pill" id="openAanmeldModal" style="white-space:nowrap;">Register</a>
-          </div>
-
-          <!-- DATES -->
-          <p class="contact__subtitle">Dates 2028</p>
-
-          <div style="display:flex; gap:32px; flex-wrap:wrap; margin-bottom:24px;">
-            <div style="display:flex; align-items:center; gap:8px;">
-              <span style="font-size:16px;">🕘</span>
-              <span style="font-family:'Jost',sans-serif; font-weight:300; font-size:14px; color:#4a4540;">09:30 – 16:00</span>
-            </div>
-            <div style="display:flex; align-items:center; gap:8px;">
-              <span style="font-size:16px;">📍</span>
-              <span style="font-family:'Jost',sans-serif; font-weight:300; font-size:14px; color:#4a4540;">Laren, North Holland</span>
-            </div>
-            <div style="display:flex; align-items:center; gap:8px;">
-              <span style="font-size:16px;">📅</span>
-              <span style="font-family:'Jost',sans-serif; font-weight:300; font-size:14px; color:#4a4540;">10 teaching days</span>
-            </div>
-          </div>
-
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0; margin-bottom:40px; border-top:1px solid rgba(0,0,0,0.07);">
-            <div style="padding:10px 12px 10px 0; border-bottom:1px solid rgba(0,0,0,0.07);"><span style="font-family:'Jost',sans-serif; font-weight:300; font-size:14px; color:#4a4540;">22 &amp; 23 January 2028</span></div>
-            <div style="padding:10px 0 10px 12px; border-bottom:1px solid rgba(0,0,0,0.07); border-left:1px solid rgba(0,0,0,0.07);"><span style="font-family:'Jost',sans-serif; font-weight:300; font-size:14px; color:#4a4540;">26 &amp; 27 February 2028</span></div>
-            <div style="padding:10px 12px 10px 0; border-bottom:1px solid rgba(0,0,0,0.07);"><span style="font-family:'Jost',sans-serif; font-weight:300; font-size:14px; color:#4a4540;">25 &amp; 26 March 2028</span></div>
-            <div style="padding:10px 0 10px 12px; border-bottom:1px solid rgba(0,0,0,0.07); border-left:1px solid rgba(0,0,0,0.07);"><span style="font-family:'Jost',sans-serif; font-weight:300; font-size:14px; color:#4a4540;">22 &amp; 23 April 2028</span></div>
-            <div style="padding:10px 12px 10px 0; border-bottom:1px solid rgba(0,0,0,0.07);"><span style="font-family:'Jost',sans-serif; font-weight:300; font-size:14px; color:#4a4540;">27 &amp; 28 May 2028</span></div>
-            <div style="padding:10px 0 10px 12px; border-bottom:1px solid rgba(0,0,0,0.07); border-left:1px solid rgba(0,0,0,0.07);"><span style="font-family:'Jost',sans-serif; font-weight:300; font-size:14px; color:#4a4540;">24 &amp; 25 June 2028</span></div>
-            <div style="padding:10px 12px 10px 0; border-bottom:1px solid rgba(0,0,0,0.07);"><span style="font-family:'Jost',sans-serif; font-weight:300; font-size:14px; color:#4a4540;">26 &amp; 27 August 2028</span></div>
-            <div style="padding:10px 0 10px 12px; border-bottom:1px solid rgba(0,0,0,0.07); border-left:1px solid rgba(0,0,0,0.07);"><span style="font-family:'Jost',sans-serif; font-weight:300; font-size:14px; color:#4a4540;">23 &amp; 24 September 2028</span></div>
-            <div style="padding:10px 12px 10px 0; border-bottom:1px solid rgba(0,0,0,0.07);"><span style="font-family:'Jost',sans-serif; font-weight:300; font-size:14px; color:#4a4540;">28 &amp; 29 October 2028</span></div>
-            <div style="padding:10px 0 10px 12px; border-bottom:1px solid rgba(0,0,0,0.07); border-left:1px solid rgba(0,0,0,0.07);"><span style="font-family:'Jost',sans-serif; font-weight:300; font-size:14px; color:#4a4540;">25 &amp; 26 November 2028</span></div>
-            <div style="padding:10px 12px 10px 0; grid-column:1/-1; border-bottom:1px solid rgba(0,0,0,0.07);">
-              <span style="font-family:'Jost',sans-serif; font-weight:300; font-size:14px; color:#4a4540;">17 December 2028</span>
-              <span style="font-family:'Jost',sans-serif; font-weight:400; font-size:12px; color:#95967d; letter-spacing:0.04em; margin-left:12px;">Certificate ceremony</span>
-            </div>
-          </div>
-
-          <p class="contact__subtitle">Who is this training for?</p>
-          <p class="contact__desc">This annual training is suitable for participants who have already completed a mediumship course or training and wish to deepen their development.</p>
-
-          <p class="contact__subtitle">The theme: Awakening</p>
-          <p class="contact__desc">Welcome to the 2028 annual mediumship training. This year is centred around 'awakening' — a theme deeply rooted in the search for self-discovery and spiritual growth. For many, 2028 will be a year in which they will fully embrace their spiritual life. The other side of ourselves is no longer seen as an acquired lifestyle, but as an essential and authentic path inward.</p>
-          <p class="contact__desc">The choices you have made in the past bring you closer to your true self. This connection will manifest in your daily life. Mediumship plays a crucial role in this; it offers a valuable space for further spiritual connection and gives you the freedom to develop and use your gifts for others.</p>
-
-          <p class="contact__subtitle">What can you expect?</p>
-          <p class="contact__desc">During the annual training we create an environment in which mediumship serves the people who are in great need of our help. You will find that a deeper connection with the Spirit World arises, enabling you to contribute to healing and support for others.</p>
-          <p class="contact__desc">In 2028 we invite you to embark on this journey of awakening with us. Discover how you can develop your intuitive and mediumistic skills, and experience the power of spiritual connection. Together we will grow, learn and inspire one another.</p>
-
-          <p class="contact__subtitle">Two groups, two levels</p>
-
-          <p style="font-family:'Jost',sans-serif; font-weight:500; font-size:15px; color:#2a2520; margin:0 0 8px; letter-spacing:0.04em;">Saturday group — Deepening Mediumship <span style="font-weight:300; color:#7a7060;">(intermediate level)</span></p>
-          <p class="contact__desc">This group focuses on deepening mediumship. Very suitable for people who have already completed a training and wish to develop further.</p>
-          <ul style="list-style:none; padding:0; margin:0 0 28px;">
-            <li style="font-family:'Jost',sans-serif; font-weight:300; font-size:15px; color:#4a4540; line-height:1.7; padding:7px 0 7px 20px; border-bottom:1px solid rgba(0,0,0,0.07); position:relative;"><span style="position:absolute; left:0; color:#95967d;">—</span> Optimising mediumistic skills</li>
-            <li style="font-family:'Jost',sans-serif; font-weight:300; font-size:15px; color:#4a4540; line-height:1.7; padding:7px 0 7px 20px; border-bottom:1px solid rgba(0,0,0,0.07); position:relative;"><span style="position:absolute; left:0; color:#95967d;">—</span> Deepening Spiritual Communication</li>
-            <li style="font-family:'Jost',sans-serif; font-weight:300; font-size:15px; color:#4a4540; line-height:1.7; padding:7px 0 7px 20px; border-bottom:1px solid rgba(0,0,0,0.07); position:relative;"><span style="position:absolute; left:0; color:#95967d;">—</span> Learning to overcome personal obstacles</li>
-            <li style="font-family:'Jost',sans-serif; font-weight:300; font-size:15px; color:#4a4540; line-height:1.7; padding:7px 0 7px 20px; border-bottom:1px solid rgba(0,0,0,0.07); position:relative;"><span style="position:absolute; left:0; color:#95967d;">—</span> Structuring mediumistic abilities</li>
-            <li style="font-family:'Jost',sans-serif; font-weight:300; font-size:15px; color:#4a4540; line-height:1.7; padding:7px 0 7px 20px; position:relative;"><span style="position:absolute; left:0; color:#95967d;">—</span> Working with clairsenses (claircognisance, clairsentience, clairvoyance)</li>
-          </ul>
-
-          <p style="font-family:'Jost',sans-serif; font-weight:500; font-size:15px; color:#2a2520; margin:0 0 8px; letter-spacing:0.04em;">Sunday group — Platform Demonstrations <span style="font-weight:300; color:#7a7060;">(advanced level)</span></p>
-          <p class="contact__desc">This group is trained throughout the year in giving demonstrations for (large) groups. Only accessible to mediums who have proven themselves in the field.</p>
-          <ul style="list-style:none; padding:0; margin:0 0 32px;">
-            <li style="font-family:'Jost',sans-serif; font-weight:300; font-size:15px; color:#4a4540; line-height:1.7; padding:7px 0 7px 20px; border-bottom:1px solid rgba(0,0,0,0.07); position:relative;"><span style="position:absolute; left:0; color:#95967d;">—</span> Demonstrating Spiritual Contacts on the basis of evidence</li>
-            <li style="font-family:'Jost',sans-serif; font-weight:300; font-size:15px; color:#4a4540; line-height:1.7; padding:7px 0 7px 20px; border-bottom:1px solid rgba(0,0,0,0.07); position:relative;"><span style="position:absolute; left:0; color:#95967d;">—</span> Morals, ethics and handling audience dynamics</li>
-            <li style="font-family:'Jost',sans-serif; font-weight:300; font-size:15px; color:#4a4540; line-height:1.7; padding:7px 0 7px 20px; border-bottom:1px solid rgba(0,0,0,0.07); position:relative;"><span style="position:absolute; left:0; color:#95967d;">—</span> Learning to demonstrate with full (self-)confidence</li>
-            <li style="font-family:'Jost',sans-serif; font-weight:300; font-size:15px; color:#4a4540; line-height:1.7; padding:7px 0 7px 20px; border-bottom:1px solid rgba(0,0,0,0.07); position:relative;"><span style="position:absolute; left:0; color:#95967d;">—</span> Analysing communication, information and evidence</li>
-            <li style="font-family:'Jost',sans-serif; font-weight:300; font-size:15px; color:#4a4540; line-height:1.7; padding:7px 0 7px 20px; position:relative;"><span style="position:absolute; left:0; color:#95967d;">—</span> Professional performance on the platform</li>
-          </ul>
-
-          <p class="contact__subtitle">Focus areas (both groups)</p>
-          <ul style="list-style:none; padding:0; margin:0 0 32px;">
-            <li style="font-family:'Jost',sans-serif; font-weight:300; font-size:15px; color:#4a4540; line-height:1.7; padding:7px 0 7px 20px; border-bottom:1px solid rgba(0,0,0,0.07); position:relative;"><span style="position:absolute; left:0; color:#95967d;">—</span> Discovering and deepening mediumistic talents</li>
-            <li style="font-family:'Jost',sans-serif; font-weight:300; font-size:15px; color:#4a4540; line-height:1.7; padding:7px 0 7px 20px; border-bottom:1px solid rgba(0,0,0,0.07); position:relative;"><span style="position:absolute; left:0; color:#95967d;">—</span> Deepening communication with Spirit and Guides</li>
-            <li style="font-family:'Jost',sans-serif; font-weight:300; font-size:15px; color:#4a4540; line-height:1.7; padding:7px 0 7px 20px; border-bottom:1px solid rgba(0,0,0,0.07); position:relative;"><span style="position:absolute; left:0; color:#95967d;">—</span> Demonstrating on the platform and private consultations</li>
-            <li style="font-family:'Jost',sans-serif; font-weight:300; font-size:15px; color:#4a4540; line-height:1.7; padding:7px 0 7px 20px; border-bottom:1px solid rgba(0,0,0,0.07); position:relative;"><span style="position:absolute; left:0; color:#95967d;">—</span> Background of spiritual philosophy and inspiration</li>
-            <li style="font-family:'Jost',sans-serif; font-weight:300; font-size:15px; color:#4a4540; line-height:1.7; padding:7px 0 7px 20px; border-bottom:1px solid rgba(0,0,0,0.07); position:relative;"><span style="position:absolute; left:0; color:#95967d;">—</span> Relationship with your Spirit Team, Sponsors and Guides</li>
-            <li style="font-family:'Jost',sans-serif; font-weight:300; font-size:15px; color:#4a4540; line-height:1.7; padding:7px 0 7px 20px; position:relative;"><span style="position:absolute; left:0; color:#95967d;">—</span> Practice-oriented exercises and feedback</li>
-          </ul>
-
-          <p class="contact__subtitle">Community &amp; Connection</p>
-          <p class="contact__desc">It is wonderful to see how new friendships form every year. Participants enjoy each other's development and growth. Everyone is on their own path and wishes each other the very best. That encouragement gives people wings!</p>
-
-        </div>
+        <span class="modal__tag">Annual Mediumship Training</span>
+        <h2 class="contact__title" style="font-size:clamp(36px,4vw,56px); margin-bottom:20px;">Coming<br>Soon</h2>
+        <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:20px; color:#7a7060;">The Annual Mediumship Training takes place in the Netherlands. More information coming soon.</p>
       </div>
     </div>
   </div>
@@ -1861,8 +1762,8 @@
     </div>
   </div>
 
-  <!-- REGISTRATION MODAL: ANNUAL TRAINING -->
-  <div class="modal-backdrop" id="aanmeldModal">
+  <!-- REGISTRATION MODAL REMOVED FOR EN VERSION -->
+  <div class="modal-backdrop" id="aanmeldModal" style="display:none;">
     <div class="modal modal--story">
       <div class="modal__story-inner" style="position:relative;">
         <button class="modal__close" id="closeAanmeldModal">&times;</button>
@@ -2056,10 +1957,10 @@
     <div class="modal" style="position:relative;">
       <button class="modal__close modal__close--grid" id="closeModal">&times;</button>
       <div class="modal__left">
-        <h2 class="contact__title">Private<br>Consultation</h2>
+        <h2 class="contact__title">Private<br>Sitting</h2>
         <p class="contact__meta">1 hour online &bull; €75,-</p>
         <p class="contact__desc">
-          During a private consultation I make the connection with the Spirit World. I tune in to what is happening in your life and in relation to a deceased loved one. It is a special, spiritual experience that will leave a deep impression.
+          During a private sitting I make the connection with the Spirit World. I tune in to what is happening in your life and in relation to a deceased loved one. It is a special, spiritual experience that will leave a deep impression.
         </p>
         <p class="contact__subtitle">What can you expect?</p>
         <p class="contact__desc">
@@ -2067,12 +1968,12 @@
         </p>
         <p class="contact__subtitle">How does it work?</p>
         <p class="contact__desc">
-          During the consultation I focus on awareness, awakening and growth. I do this in a personal and connecting way, with ample space to get to the heart of things. After registration you will receive a confirmation and link for the online session. Make sure you have a quiet place where you can be undisturbed.
+          During the sitting I focus on awareness, awakening and growth. I do this in a personal and connecting way, with ample space to get to the heart of things. After booking you will receive a confirmation and link for the online session. Make sure you have a quiet place where you can be undisturbed.
         </p>
       </div>
       <div class="modal__right" style="position:relative;">
         <form class="contact__form" id="consultForm" action="https://formspree.io/f/xykovbvp" method="POST">
-          <input type="hidden" name="_subject" value="New consultation request — ericsweder.com (EN)">
+          <input type="hidden" name="_subject" value="New private sitting request — ericsweder.com (EN)">
           <input type="text" name="_gotcha" style="display:none">
           <div class="form-group">
             <label class="form-label">Name</label>
@@ -2240,20 +2141,7 @@
       if (e.target === blogBackdrop) { blogBackdrop.classList.remove('is-open'); document.body.style.overflow = ''; }
     });
 
-    // Registration modal
-    const aanmeldBackdrop = document.getElementById('aanmeldModal');
-    document.getElementById('openAanmeldModal').addEventListener('click', function(e) {
-      e.preventDefault();
-      aanmeldBackdrop.classList.add('is-open');
-      document.body.style.overflow = 'hidden';
-    });
-    document.getElementById('closeAanmeldModal').addEventListener('click', function() {
-      aanmeldBackdrop.classList.remove('is-open');
-      document.body.style.overflow = '';
-    });
-    aanmeldBackdrop.addEventListener('click', function(e) {
-      if (e.target === aanmeldBackdrop) { aanmeldBackdrop.classList.remove('is-open'); document.body.style.overflow = ''; }
-    });
+    // Registration modal — not used in EN version (training is NL only)
 
     // Annual training modal
     const jaaropleidingBackdrop = document.getElementById('jaaropleidingModal');
@@ -2419,7 +2307,7 @@
     }
     handleForm('consultForm', 'consultSuccess');
     handleForm('contactForm', 'contactSuccess');
-    handleForm('aanmeldForm', 'aanmeldSuccess');
+    // handleForm('aanmeldForm', 'aanmeldSuccess'); — not used in EN version
 
     // Consultation modal
     const backdrop = document.getElementById('modal');
