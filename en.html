@@ -7,7 +7,12 @@
   <meta name="description" content="Eric Sweder is a spiritual medium and guide, based in Hilversum. Make space for awareness, awakening and growth.">
   <meta property="og:title" content="By Eric Sweder — Spiritual Medium">
   <meta property="og:description" content="Spiritual medium and guide. Make space for the power within you.">
-  <meta property="og:image" content="images/PB060035.jpg">
+  <meta property="og:image" content="https://ericsweder.com/images/PB060035.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:url" content="https://ericsweder.com/en.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://ericsweder.com/images/PB060035.jpg">
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#1c1814">
   <script type="application/ld+json">
@@ -1119,10 +1124,10 @@
     .hero__lang-link {
       font-family: 'Jost', sans-serif;
       font-weight: 400;
-      font-size: 11px;
+      font-size: 13px;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: rgba(240,232,220,0.6);
+      color: rgba(240,232,220,0.75);
       text-decoration: none;
       transition: color 0.2s;
     }
@@ -1131,18 +1136,18 @@
 
     .hero__lang-active {
       font-family: 'Jost', sans-serif;
-      font-weight: 400;
-      font-size: 11px;
+      font-weight: 500;
+      font-size: 13px;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: rgba(240,232,220,0.95);
-      border-bottom: 1px solid rgba(240,232,220,0.5);
-      padding-bottom: 1px;
+      color: rgba(240,232,220,1);
+      border-bottom: 1px solid rgba(240,232,220,0.7);
+      padding-bottom: 2px;
     }
 
     .hero__lang-sep {
-      color: rgba(240,232,220,0.3);
-      font-size: 11px;
+      color: rgba(240,232,220,0.4);
+      font-size: 13px;
       font-family: 'Jost', sans-serif;
     }
 
@@ -1549,6 +1554,11 @@
         <a href="#" class="story-card__link" onclick="openStory(); return false;">Read more</a>
       </div>
       <div class="story-card">
+        <img class="story-card__image" src="images/de-nieuwe-wereld.jpg" alt="A New World Foundation" loading="lazy">
+        <p class="story-card__title">A New World Foundation</p>
+        <a href="#" class="story-card__link" onclick="openStory4(); return false;">Read more</a>
+      </div>
+      <div class="story-card">
         <img class="story-card__image" src="images/PB060017.jpg" alt="An unexpected conversation with my father" loading="lazy">
         <p class="story-card__title">An unexpected conversation with my father</p>
         <a href="#" class="story-card__link">Read more</a>
@@ -1605,6 +1615,22 @@
       <p class="footer__copy">© 2026 By Eric Sweder — All rights reserved &nbsp;·&nbsp; <a href="privacy.html" style="color:#4a4540; text-decoration:underline; text-underline-offset:3px;">Privacy Policy</a></p>
     </div>
   </footer>
+
+  <!-- STORY MODAL 4: A NEW WORLD FOUNDATION -->
+  <div class="modal-backdrop" id="storyModal4">
+    <div class="modal modal--story">
+      <div class="modal__story-inner" style="position:relative;">
+        <button class="modal__close" id="closeStoryModal4">&times;</button>
+        <img src="images/de-nieuwe-wereld.jpg" alt="A New World Foundation" style="width:100%; max-height:340px; object-fit:cover; object-position:center 30%; display:block; margin-bottom:40px;">
+        <div style="padding: 0 52px 52px;">
+          <span class="modal__tag">Personal Story</span>
+          <h2 class="contact__title" style="font-size:clamp(32px,3.5vw,52px); margin-bottom:8px;">A New World Foundation</h2>
+          <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:20px; color:#7a7060; margin-bottom:32px;">Story coming soon</p>
+          <p class="contact__desc">This story will be added shortly. Come back later to read the full story.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- STORY MODAL: PROMISE OF LOVE -->
   <div class="modal-backdrop" id="storyModal">
@@ -2171,6 +2197,20 @@
     });
     ericBackdrop.addEventListener('click', function(e) {
       if (e.target === ericBackdrop) { ericBackdrop.classList.remove('is-open'); document.body.style.overflow = ''; }
+    });
+
+    // Story modal 4 — A New World Foundation
+    const storyBackdrop4 = document.getElementById('storyModal4');
+    function openStory4() {
+      storyBackdrop4.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+    document.getElementById('closeStoryModal4').addEventListener('click', function() {
+      storyBackdrop4.classList.remove('is-open');
+      document.body.style.overflow = '';
+    });
+    storyBackdrop4.addEventListener('click', function(e) {
+      if (e.target === storyBackdrop4) { storyBackdrop4.classList.remove('is-open'); document.body.style.overflow = ''; }
     });
 
     // Story modal 2
