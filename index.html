@@ -2178,15 +2178,16 @@
 
   <!-- NIEUWSBRIEF BEVESTIGING MODAL -->
   <div class="modal-backdrop" id="newsModal">
-    <div class="modal modal--narrow">
-      <div class="modal__single" style="position:relative;">
-        <button class="modal__close" id="closeNewsModal">&times;</button>
+    <div class="modal modal--narrow" style="overflow-y:auto; position:relative;">
+      <div style="position:sticky; top:0; z-index:20; text-align:right; padding:16px 16px 0; pointer-events:none;">
+        <button class="modal__close" id="closeNewsModal" style="position:static; display:inline-flex; pointer-events:all;">&times;</button>
+      </div>
+      <div class="modal__single" style="padding-top:8px;">
         <p class="modal__tag">Bedankt voor je inschrijving!</p>
-        <h2 class="contact__title" style="font-size:clamp(32px,4vw,52px); margin-bottom:24px;">Bevestig je<br>inschrijving.</h2>
+        <h2 class="contact__title" style="font-size:clamp(28px,4vw,52px); margin-bottom:24px;">Bevestig je<br>inschrijving.</h2>
         <p class="contact__desc">Je ontvangt zo een bevestigingsmail. Klik op de link daarin om je inschrijving te voltooien.</p>
         <p class="contact__desc" style="margin-bottom:32px;">Geen mail ontvangen? Check ook je <strong>spam</strong> of <strong>reclame-map</strong>.</p>
-        <a href="mailto:" class="btn-dark" style="display:inline-block; margin-bottom:16px;">Open mail</a>
-        <p class="contact__desc" style="font-size:13px; color:#8a8070;">Tot snel — <em>Eric</em></p>
+        <p class="contact__desc" style="font-size:13px; color:#8a8070; margin-top:8px;">Tot snel — <em>Eric</em></p>
       </div>
     </div>
   </div>
