@@ -1969,13 +1969,11 @@
       <div class="modal__single" style="position:relative;">
         <button class="modal__close" id="closeNewsModal">&times;</button>
         <p class="modal__tag">Thank you for subscribing!</p>
-        <h2 class="contact__title" style="font-size:clamp(36px,4vw,56px); margin-bottom:24px;">Welcome to the<br>community of<br>By Eric Sweder.</h2>
-        <p class="contact__desc">One more step: check your inbox and confirm your subscription via the link in the email. Sometimes this email ends up in your spam or promotions folder — so do check there too!</p>
-        <p class="contact__subtitle">Two-step verification</p>
-        <p class="contact__desc">After clicking the confirmation link you are fully subscribed. You will then regularly receive inspiration, insights and updates about demonstrations, training courses and the spiritual journey.</p>
-        <p class="contact__subtitle">Nothing received?</p>
-        <p class="contact__desc">Check your spam folder or send an email to <a href="mailto:esvdzw@gmail.com" style="color:#2a2520;">esvdzw@gmail.com</a> and we will help you.</p>
-        <p class="contact__desc" style="margin-top:8px;">See you soon and warm regards,<br><em>Eric</em></p>
+        <h2 class="contact__title" style="font-size:clamp(32px,4vw,52px); margin-bottom:24px;">Confirm your<br>subscription.</h2>
+        <p class="contact__desc">You will receive a confirmation email shortly. Click the link inside to complete your subscription.</p>
+        <p class="contact__desc" style="margin-bottom:32px;">No email? Check your <strong>spam</strong> or <strong>promotions folder</strong>.</p>
+        <a href="mailto:" class="btn-dark" style="display:inline-block; margin-bottom:16px;">Open mail</a>
+        <p class="contact__desc" style="font-size:13px; color:#8a8070;">See you soon — <em>Eric</em></p>
       </div>
     </div>
   </div>
@@ -2301,9 +2299,8 @@
         const data = await res.json().catch(() => ({}));
         if (res.ok) {
           emailInput.value = '';
-          emailInput.style.display = 'none';
-          this.style.display = 'none';
-          successEl.style.display = 'block';
+          newsBackdrop.classList.add('is-open');
+          document.body.style.overflow = 'hidden';
         } else {
           errorEl.textContent = 'Error: ' + (data.error || res.status);
           errorEl.style.display = 'block';

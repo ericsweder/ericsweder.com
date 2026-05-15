@@ -2182,13 +2182,11 @@
       <div class="modal__single" style="position:relative;">
         <button class="modal__close" id="closeNewsModal">&times;</button>
         <p class="modal__tag">Bedankt voor je inschrijving!</p>
-        <h2 class="contact__title" style="font-size:clamp(36px,4vw,56px); margin-bottom:24px;">Welkom in de<br>community van<br>By Eric Sweder.</h2>
-        <p class="contact__desc">Nog één stap: Check je inbox en bevestig je inschrijving via de link in de email. Soms komt deze mail terecht in je spam of reclame-map – dus kijk ook daar even!</p>
-        <p class="contact__subtitle">Tweestaps verificatie</p>
-        <p class="contact__desc">Na het klikken op de bevestigingslink ben je definitief ingeschreven. Je ontvangt dan regelmatig inspiratie, inzichten en updates over demonstraties, opleidingen en de spirituele reis.</p>
-        <p class="contact__subtitle">Niets ontvangen?</p>
-        <p class="contact__desc">Controleer je spam-map of stuur een email naar <a href="mailto:esvdzw@gmail.com" style="color:#2a2520;">esvdzw@gmail.com</a>, dan helpen we je verder.</p>
-        <p class="contact__desc" style="margin-top:8px;">Tot snel en warme groet,<br><em>Eric</em></p>
+        <h2 class="contact__title" style="font-size:clamp(32px,4vw,52px); margin-bottom:24px;">Bevestig je<br>inschrijving.</h2>
+        <p class="contact__desc">Je ontvangt zo een bevestigingsmail. Klik op de link daarin om je inschrijving te voltooien.</p>
+        <p class="contact__desc" style="margin-bottom:32px;">Geen mail ontvangen? Check ook je <strong>spam</strong> of <strong>reclame-map</strong>.</p>
+        <a href="mailto:" class="btn-dark" style="display:inline-block; margin-bottom:16px;">Open mail</a>
+        <p class="contact__desc" style="font-size:13px; color:#8a8070;">Tot snel — <em>Eric</em></p>
       </div>
     </div>
   </div>
@@ -2530,9 +2528,8 @@
         const data = await res.json().catch(() => ({}));
         if (res.ok) {
           emailInput.value = '';
-          emailInput.style.display = 'none';
-          this.style.display = 'none';
-          successEl.style.display = 'block';
+          newsBackdrop.classList.add('is-open');
+          document.body.style.overflow = 'hidden';
         } else {
           errorEl.textContent = 'Fout: ' + (data.error || res.status);
           errorEl.style.display = 'block';
