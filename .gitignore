@@ -15,3 +15,6 @@ images/Scherm*
 
 # Dev
 serve.sh
+
+# Privé projectdocumentatie (bevat API-sleutels — nooit op GitHub)
+PROJECTINFO.md
