@@ -1258,26 +1258,34 @@
 
     /* ─── QUOTE BREAK ──────────────────────────────────── */
     .quote-break {
-      background: #f2ede7;
-      padding: 80px 80px;
+      background: #d6cfc3;
+      padding: 88px 80px;
       text-align: center;
+      border-top: 1px solid rgba(0,0,0,0.08);
+    }
+    .quote-break__line {
+      width: 40px;
+      height: 1px;
+      background: #95967d;
+      margin: 0 auto 36px;
     }
     .quote-break__title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(30px, 3.8vw, 52px);
+      font-size: clamp(32px, 4vw, 56px);
       font-weight: 400;
       font-style: italic;
       color: #1e1c18;
       line-height: 1.2;
-      margin: 0 0 20px;
+      margin: 0 auto 32px;
+      max-width: 720px;
     }
     .quote-break__subtitle {
       font-family: 'Jost', sans-serif;
-      font-size: 11px;
-      font-weight: 300;
-      letter-spacing: 0.3em;
+      font-size: clamp(13px, 1.2vw, 16px);
+      font-weight: 400;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: #95967d;
+      color: #2a2520;
       margin: 0;
     }
 
@@ -1318,7 +1326,7 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(32px, 4vw, 54px);
       font-weight: 400;
-      font-style: italic;
+      font-style: normal;
       color: #f0e8dc;
       line-height: 1.15;
       margin: 0 auto 72px;
@@ -1354,6 +1362,14 @@
       font-style: italic;
       color: #f0e8dc;
       line-height: 1.35;
+      margin: 0 0 14px;
+    }
+    .spiritual__tile-desc {
+      font-family: 'Jost', sans-serif;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: rgba(240,232,220,0.6);
       margin: 0;
     }
 
@@ -1467,8 +1483,9 @@
 
   <!-- QUOTE BREAK -->
   <section class="quote-break">
+    <div class="quote-break__line"></div>
     <h2 class="quote-break__title">In the silence your inner voice will speak</h2>
-    <p class="quote-break__subtitle">allow yourself to become fully present</p>
+    <p class="quote-break__subtitle">Allow yourself to become fully present</p>
   </section>
 
   <!-- SPIRITUAL PRACTICE -->
@@ -1482,14 +1499,17 @@
         <div class="spiritual__tile">
           <p class="spiritual__tile-number">1</p>
           <p class="spiritual__tile-title">Master your Mindset</p>
+          <p class="spiritual__tile-desc">Shift from fear to clarity. Learn to quiet the noise and align your thoughts with your deepest truth.</p>
         </div>
         <div class="spiritual__tile">
           <p class="spiritual__tile-number">2</p>
           <p class="spiritual__tile-title">Ignite your Soulpower</p>
+          <p class="spiritual__tile-desc">Reconnect with the energy that has always lived within you. Let it guide, protect and inspire you.</p>
         </div>
         <div class="spiritual__tile">
           <p class="spiritual__tile-number">3</p>
           <p class="spiritual__tile-title">Awaken your true Potential</p>
+          <p class="spiritual__tile-desc">Step into the fullness of who you are. Your soul&#39;s mission is waiting to be lived.</p>
         </div>
       </div>
     </div>
