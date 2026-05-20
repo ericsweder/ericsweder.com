@@ -1264,10 +1264,10 @@
       border-top: 1px solid rgba(0,0,0,0.08);
     }
     .quote-break__line {
-      width: 40px;
+      width: 120px;
       height: 1px;
       background: #95967d;
-      margin: 0 auto 36px;
+      margin: 28px auto 28px;
     }
     .quote-break__title {
       font-family: 'Cormorant Garamond', serif;
@@ -1327,10 +1327,17 @@
       font-size: clamp(32px, 4vw, 54px);
       font-weight: 400;
       font-style: normal;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
       color: #f0e8dc;
       line-height: 1.15;
       margin: 0 auto 72px;
       max-width: 700px;
+    }
+    .spiritual__title em {
+      font-style: italic;
+      text-transform: none;
+      letter-spacing: 0;
     }
     .spiritual__tiles {
       display: grid;
@@ -1483,8 +1490,8 @@
 
   <!-- QUOTE BREAK -->
   <section class="quote-break">
-    <div class="quote-break__line"></div>
     <h2 class="quote-break__title">In the silence your inner voice will speak</h2>
+    <div class="quote-break__line"></div>
     <p class="quote-break__subtitle">Allow yourself to become fully present</p>
   </section>
 
@@ -1494,7 +1501,7 @@
     <div class="spiritual__overlay"></div>
     <div class="spiritual__inner">
       <p class="spiritual__eyebrow">By Eric Sweder</p>
-      <h2 class="spiritual__title">Start your Spiritual Practice,<br>any day &nbsp;·&nbsp; any time &nbsp;·&nbsp; any place</h2>
+      <h2 class="spiritual__title">Start your Spiritual Practice<br><em>any day &nbsp;·&nbsp; any time &nbsp;·&nbsp; any place</em></h2>
       <div class="spiritual__tiles">
         <div class="spiritual__tile">
           <p class="spiritual__tile-number">1</p>
