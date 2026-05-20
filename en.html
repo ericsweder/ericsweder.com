@@ -2473,18 +2473,12 @@
       var form       = document.getElementById('journeyPopupForm');
       var emailInput = document.getElementById('journeyPopupEmail');
       var successMsg = document.getElementById('journeyPopupSuccess');
-      var STORAGE_KEY = 'journeyPopupDismissed';
-      var DAYS_7 = 7 * 24 * 60 * 60 * 1000;
-
       function closePopup() {
         popup.style.display = 'none';
         document.body.style.overflow = '';
-        localStorage.setItem(STORAGE_KEY, Date.now());
       }
 
       function showPopup() {
-        var dismissed = localStorage.getItem(STORAGE_KEY);
-        if (dismissed && (Date.now() - parseInt(dismissed)) < DAYS_7) return;
         popup.style.display = 'flex';
         document.body.style.overflow = 'hidden';
       }
