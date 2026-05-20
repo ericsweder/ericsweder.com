@@ -2418,8 +2418,8 @@
       <!-- Content -->
       <div style="position:relative; z-index:5; padding:56px 48px 48px; text-align:center;">
         <p style="
-          font-family:'Jost',sans-serif; font-size:10px; letter-spacing:0.28em;
-          text-transform:uppercase; color:rgba(242,237,231,0.6); margin:0 0 20px;
+          font-family:'Jost',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.28em;
+          text-transform:uppercase; color:rgba(242,237,231,0.6); margin:48px 0 20px;
         ">By Eric Sweder</p>
 
         <h2 style="
@@ -2483,15 +2483,13 @@
       }
 
       function showPopup() {
-        // localStorage check uitgeschakeld voor testen
-        // var dismissed = localStorage.getItem(STORAGE_KEY);
-        // if (dismissed && (Date.now() - parseInt(dismissed)) < DAYS_7) return;
+        var dismissed = localStorage.getItem(STORAGE_KEY);
+        if (dismissed && (Date.now() - parseInt(dismissed)) < DAYS_7) return;
         popup.style.display = 'flex';
         document.body.style.overflow = 'hidden';
       }
 
-      // Toon direct (tijdelijk voor testen)
-      setTimeout(showPopup, 0);
+      setTimeout(showPopup, 5000);
 
       closeBtn.addEventListener('click', closePopup);
       skipBtn.addEventListener('click', closePopup);
