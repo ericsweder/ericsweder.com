@@ -1325,15 +1325,15 @@
     }
     .spiritual__title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(32px, 4vw, 54px);
+      font-size: clamp(28px, 3.6vw, 54px);
       font-weight: 400;
       font-style: normal;
       text-transform: uppercase;
       letter-spacing: -0.01em;
+      white-space: nowrap;
       color: #f0e8dc;
       line-height: 1.15;
       margin: 0 auto 72px;
-      max-width: 700px;
     }
     .spiritual__title em {
       font-style: italic;
@@ -1419,6 +1419,7 @@
       .freebie__input { width: 100%; box-sizing: border-box; }
       .quote-break { padding: 56px 24px; }
       .spiritual { padding: 72px 24px; }
+      .spiritual__title { white-space: normal; }
       .brand-statement__left { padding: 64px 24px; }
       .brand-statement__right { min-height: 300px; }
       .meet__photo { min-height: 340px; }
