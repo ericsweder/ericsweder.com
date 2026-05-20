@@ -1256,6 +1256,107 @@
       color: #4a4540;
     }
 
+    /* ─── QUOTE BREAK ──────────────────────────────────── */
+    .quote-break {
+      background: #f2ede7;
+      padding: 80px 80px;
+      text-align: center;
+    }
+    .quote-break__title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(30px, 3.8vw, 52px);
+      font-weight: 400;
+      font-style: italic;
+      color: #1e1c18;
+      line-height: 1.2;
+      margin: 0 0 20px;
+    }
+    .quote-break__subtitle {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #95967d;
+      margin: 0;
+    }
+
+    /* ─── SPIRITUAL PRACTICE ────────────────────────────── */
+    .spiritual {
+      position: relative;
+      overflow: hidden;
+      padding: 100px 80px;
+      text-align: center;
+    }
+    .spiritual__bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+    }
+    .spiritual__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(10,8,6,0.50) 0%, rgba(10,8,6,0.68) 100%);
+    }
+    .spiritual__inner {
+      position: relative;
+      z-index: 2;
+    }
+    .spiritual__eyebrow {
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: rgba(240,232,220,0.6);
+      margin: 0 0 20px;
+    }
+    .spiritual__title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(32px, 4vw, 54px);
+      font-weight: 400;
+      font-style: italic;
+      color: #f0e8dc;
+      line-height: 1.15;
+      margin: 0 auto 72px;
+      max-width: 700px;
+    }
+    .spiritual__tiles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .spiritual__tile {
+      background: rgba(242,237,231,0.07);
+      border: 1px solid rgba(242,237,231,0.18);
+      border-radius: 4px;
+      padding: 44px 32px 40px;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+    .spiritual__tile-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 40px;
+      font-style: italic;
+      color: rgba(240,232,220,0.2);
+      line-height: 1;
+      margin: 0 0 20px;
+    }
+    .spiritual__tile-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 400;
+      font-style: italic;
+      color: #f0e8dc;
+      line-height: 1.35;
+      margin: 0;
+    }
+
     /* ─── RESPONSIVE ────────────────────────────────────── */
     @media (max-width: 900px) {
       .hero__content { padding: 0 40px 64px; }
@@ -1270,6 +1371,9 @@
       .work__header { padding: 72px 40px 64px; }
       .work__grid { grid-template-columns: 1fr; }
       .work__item { aspect-ratio: 3/2; }
+      .quote-break { padding: 64px 40px; }
+      .spiritual { padding: 80px 40px; }
+      .spiritual__tiles { grid-template-columns: 1fr; gap: 16px; max-width: 480px; }
       .parallax-cta__content { padding: 72px 40px; }
       .footer { padding: 64px 40px 40px; }
       .footer__top { grid-template-columns: 1fr; gap: 40px; }
@@ -1289,6 +1393,8 @@
       .freebie__form { flex-direction: column; gap: 12px; }
       .btn-outline-light { margin-left: 0; width: 100%; text-align: center; padding: 16px; }
       .freebie__input { width: 100%; box-sizing: border-box; }
+      .quote-break { padding: 56px 24px; }
+      .spiritual { padding: 72px 24px; }
       .brand-statement__left { padding: 64px 24px; }
       .brand-statement__right { min-height: 300px; }
       .meet__photo { min-height: 340px; }
@@ -1356,6 +1462,36 @@
       <span class="hero__eyebrow">By Eric Sweder &nbsp;—&nbsp; Spiritual Medium</span>
       <h1 class="hero__title">It's Time to Embrace the Power Within You!</h1>
       <a href="#" class="btn-outline" id="openModal">Book a private sitting</a>
+    </div>
+  </section>
+
+  <!-- QUOTE BREAK -->
+  <section class="quote-break">
+    <h2 class="quote-break__title">In the silence your inner voice will speak</h2>
+    <p class="quote-break__subtitle">allow yourself to become fully present</p>
+  </section>
+
+  <!-- SPIRITUAL PRACTICE -->
+  <section class="spiritual">
+    <img class="spiritual__bg" src="images/spiritual-bg.jpg" alt="Clouds over a lake" loading="lazy">
+    <div class="spiritual__overlay"></div>
+    <div class="spiritual__inner">
+      <p class="spiritual__eyebrow">By Eric Sweder</p>
+      <h2 class="spiritual__title">Start your Spiritual Practice,<br>any day &nbsp;·&nbsp; any time &nbsp;·&nbsp; any place</h2>
+      <div class="spiritual__tiles">
+        <div class="spiritual__tile">
+          <p class="spiritual__tile-number">1</p>
+          <p class="spiritual__tile-title">Master your Mindset</p>
+        </div>
+        <div class="spiritual__tile">
+          <p class="spiritual__tile-number">2</p>
+          <p class="spiritual__tile-title">Ignite your Soulpower</p>
+        </div>
+        <div class="spiritual__tile">
+          <p class="spiritual__tile-number">3</p>
+          <p class="spiritual__tile-title">Awaken your true Potential</p>
+        </div>
+      </div>
     </div>
   </section>
 
