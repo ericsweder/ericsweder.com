@@ -2380,5 +2380,153 @@
     });
   </script>
 
+  <!-- ░░░ JOURNEY POPUP OVERLAY ░░░ -->
+  <div id="journeyPopup" style="
+    display:none;
+    position:fixed; inset:0; z-index:9999;
+    background:rgba(20,16,12,0.72);
+    backdrop-filter:blur(3px);
+    -webkit-backdrop-filter:blur(3px);
+    align-items:center; justify-content:center;
+    padding:24px;
+  ">
+    <div style="
+      position:relative;
+      background:#1c1814;
+      background-image:url('images/PB060175.jpg');
+      background-size:cover;
+      background-position:center top;
+      max-width:560px; width:100%;
+      border-radius:4px;
+      overflow:hidden;
+    ">
+      <!-- Dark gradient overlay over photo -->
+      <div style="
+        position:absolute; inset:0;
+        background:linear-gradient(to bottom, rgba(20,16,12,0.45) 0%, rgba(20,16,12,0.82) 60%, rgba(20,16,12,0.95) 100%);
+      "></div>
+
+      <!-- Close button -->
+      <button id="journeyPopupClose" style="
+        position:absolute; top:16px; right:16px; z-index:10;
+        background:rgba(242,237,231,0.15); border:none; border-radius:50%;
+        width:40px; height:40px; font-size:20px; color:#f2ede7;
+        cursor:pointer; display:flex; align-items:center; justify-content:center;
+        backdrop-filter:blur(4px);
+      ">&times;</button>
+
+      <!-- Content -->
+      <div style="position:relative; z-index:5; padding:80px 48px 52px; text-align:center;">
+        <p style="
+          font-family:'Jost',sans-serif; font-size:10px; letter-spacing:0.28em;
+          text-transform:uppercase; color:rgba(242,237,231,0.6); margin:0 0 20px;
+        ">By Eric Sweder</p>
+
+        <h2 style="
+          font-family:'Cormorant Garamond',serif; font-size:clamp(36px,6vw,56px);
+          font-weight:400; font-style:italic; color:#f2ede7;
+          margin:0 0 16px; line-height:1.1;
+        ">Start Your Journey</h2>
+
+        <p style="
+          font-family:'Jost',sans-serif; font-size:14px; font-weight:300;
+          line-height:1.7; color:rgba(242,237,231,0.75);
+          margin:0 0 36px; max-width:360px; margin-left:auto; margin-right:auto;
+        ">Be the first to access exclusive masterclasses, meditations and spiritual practices — coming soon.</p>
+
+        <!-- Form -->
+        <form id="journeyPopupForm" style="display:flex; flex-direction:column; gap:12px; max-width:360px; margin:0 auto 20px;">
+          <input id="journeyPopupEmail" type="email" placeholder="Your email address" style="
+            width:100%; padding:14px 20px; border:1px solid rgba(242,237,231,0.3);
+            background:rgba(242,237,231,0.08); color:#f2ede7;
+            font-family:'Jost',sans-serif; font-size:14px;
+            border-radius:100px; outline:none; box-sizing:border-box;
+          ">
+          <button type="submit" style="
+            width:100%; padding:14px 20px;
+            background:#95967d; border:none; border-radius:100px;
+            font-family:'Jost',sans-serif; font-size:11px; font-weight:400;
+            letter-spacing:0.2em; text-transform:uppercase; color:#f2ede7;
+            cursor:pointer;
+          ">Yes, I'm in!</button>
+        </form>
+
+        <p id="journeyPopupSuccess" style="
+          display:none; font-family:'Cormorant Garamond',serif; font-style:italic;
+          font-size:17px; color:#f2ede7; margin:0 0 20px;
+        ">Thank you! Check your inbox to confirm.</p>
+
+        <button id="journeyPopupSkip" style="
+          background:none; border:none; cursor:pointer;
+          font-family:'Jost',sans-serif; font-size:11px; letter-spacing:0.12em;
+          color:rgba(242,237,231,0.4); text-decoration:underline;
+        ">No thanks, maybe later</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var popup      = document.getElementById('journeyPopup');
+      var closeBtn   = document.getElementById('journeyPopupClose');
+      var skipBtn    = document.getElementById('journeyPopupSkip');
+      var form       = document.getElementById('journeyPopupForm');
+      var emailInput = document.getElementById('journeyPopupEmail');
+      var successMsg = document.getElementById('journeyPopupSuccess');
+      var STORAGE_KEY = 'journeyPopupDismissed';
+      var DAYS_7 = 7 * 24 * 60 * 60 * 1000;
+
+      function closePopup() {
+        popup.style.display = 'none';
+        document.body.style.overflow = '';
+        localStorage.setItem(STORAGE_KEY, Date.now());
+      }
+
+      function showPopup() {
+        var dismissed = localStorage.getItem(STORAGE_KEY);
+        if (dismissed && (Date.now() - parseInt(dismissed)) < DAYS_7) return;
+        popup.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+
+      // Toon na 5 seconden
+      setTimeout(showPopup, 5000);
+
+      closeBtn.addEventListener('click', closePopup);
+      skipBtn.addEventListener('click', closePopup);
+      popup.addEventListener('click', function(e) {
+        if (e.target === popup) closePopup();
+      });
+
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        var email = emailInput.value.trim();
+        if (!email || !email.includes('@')) { emailInput.focus(); return; }
+        var submitBtn = form.querySelector('button[type="submit"]');
+        submitBtn.textContent = 'Just a moment…';
+        submitBtn.disabled = true;
+        try {
+          var res = await fetch('/api/subscribe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: email, audience: 'en' })
+          });
+          if (res.ok) {
+            form.style.display = 'none';
+            successMsg.style.display = 'block';
+            localStorage.setItem(STORAGE_KEY, Date.now());
+            setTimeout(closePopup, 3000);
+          } else {
+            submitBtn.textContent = "Yes, I'm in!";
+            submitBtn.disabled = false;
+          }
+        } catch(err) {
+          submitBtn.textContent = "Yes, I'm in!";
+          submitBtn.disabled = false;
+        }
+      });
+    })();
+  </script>
+
 </body>
 </html>
