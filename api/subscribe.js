@@ -3,10 +3,11 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  let email;
+  let email, audience;
   try {
     const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
-    email = body?.email;
+    email    = body?.email;
+    audience = body?.audience; // 'en' = internationale lijst, alles anders = NL lijst
   } catch {
     return res.status(400).json({ error: 'Invalid request body' });
   }
@@ -16,7 +17,9 @@ export default async function handler(req, res) {
   }
 
   const API_KEY  = process.env.MAILCHIMP_API_KEY;
-  const AUDIENCE = process.env.MAILCHIMP_AUDIENCE_ID;
+  const AUDIENCE = audience === 'en'
+    ? process.env.MAILCHIMP_AUDIENCE_ID_EN
+    : process.env.MAILCHIMP_AUDIENCE_ID;
   const SERVER   = process.env.MAILCHIMP_SERVER;
 
   if (!API_KEY || !AUDIENCE || !SERVER) {
