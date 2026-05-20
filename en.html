@@ -2483,14 +2483,15 @@
       }
 
       function showPopup() {
-        var dismissed = localStorage.getItem(STORAGE_KEY);
-        if (dismissed && (Date.now() - parseInt(dismissed)) < DAYS_7) return;
+        // localStorage check uitgeschakeld voor testen
+        // var dismissed = localStorage.getItem(STORAGE_KEY);
+        // if (dismissed && (Date.now() - parseInt(dismissed)) < DAYS_7) return;
         popup.style.display = 'flex';
         document.body.style.overflow = 'hidden';
       }
 
-      // Toon na 5 seconden
-      setTimeout(showPopup, 5000);
+      // Toon direct (tijdelijk voor testen)
+      setTimeout(showPopup, 0);
 
       closeBtn.addEventListener('click', closePopup);
       skipBtn.addEventListener('click', closePopup);
