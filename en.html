@@ -1053,6 +1053,21 @@
       filter: grayscale(100%);
     }
 
+    /* Triptych: één foto doorlopend over drie panelen */
+    .work__item--tri {
+      background-image: url('images/triptych-forest.jpg');
+      background-size: 300% auto;
+      background-repeat: no-repeat;
+      transition: background-size 0.6s ease;
+    }
+    .work__item--tri:hover {
+      background-size: 312% auto;
+    }
+    .work__item--tri img { display: none; }
+    .work__item--tri-left   { background-position: 0% center; }
+    .work__item--tri-mid    { background-position: 50% center; }
+    .work__item--tri-right  { background-position: 100% center; }
+
     .work__label {
       position: absolute;
       bottom: 40px;
@@ -1592,17 +1607,14 @@
       <div class="work__divider"></div>
     </div>
     <div class="work__grid">
-      <div class="work__item">
-        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80" alt="Annual Mediumship Training">
-        <a href="#" class="work__label" id="openJaaropleidingModal">Annual Mediumship Training</a>
+      <div class="work__item work__item--tri work__item--tri-left">
+        <a href="#" class="work__label" id="openComingSoon1">Teachings &amp; Masterclasses</a>
       </div>
-      <div class="work__item">
-        <img src="images/PB060146.jpg" alt="Online mentorship spiritual medium Eric Sweder" loading="lazy" style="object-position: center 15%;">
-        <a href="#" class="work__label" id="openMentorshipModal">Online Mentorships</a>
+      <div class="work__item work__item--tri work__item--tri-mid">
+        <a href="#" class="work__label" id="openComingSoon2">Spiritual Practices</a>
       </div>
-      <div class="work__item">
-        <img src="images/IMG_2727.jpg" alt="Blog on spiritual philosophy by Eric Sweder" loading="lazy">
-        <a href="#" class="work__label" id="openBlogModal">Blog — Philosophy</a>
+      <div class="work__item work__item--tri work__item--tri-right">
+        <a href="#" class="work__label" id="openComingSoon3">Online Community</a>
       </div>
     </div>
   </section>
@@ -2662,6 +2674,12 @@
 
       closeBtn.addEventListener('click', closePopup);
       skipBtn.addEventListener('click', closePopup);
+
+      // Triptych knoppen openen de journey popup
+      ['openComingSoon1','openComingSoon2','openComingSoon3'].forEach(function(id) {
+        var btn = document.getElementById(id);
+        if (btn) btn.addEventListener('click', function(e) { e.preventDefault(); showPopup(); });
+      });
       popup.addEventListener('click', function(e) {
         if (e.target === popup) closePopup();
       });
